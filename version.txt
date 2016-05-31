@@ -1,0 +1,42 @@
+=== Paid Membership Pro - Custom checkout.php ===
+Contributors: strangerstudios | Prospect7
+Tested up to: 4.2.5
+Version: 2.4
+
+== Description ==
+This page template is used from the paid membership pro plugin. It's heavily customized strictly for IWBC website.
+
+== Changelog ==
+
+=2.4=
+* Removed the extra helper fields from showing on the review page.
+
+=2.3=
+* Updated from core changes on the cc cvv
+
+
+=2.2=
+* PMPro Core Update changes the checkout page template - removed the check & pmpro Level free code
+
+=2.1=
+* Added jQuery to disable the enter key from being used while in the form. Accidentally hitting return/enter submitted the form, causing field errors.
+
+=2.0=
+* Customized and added an order total on the bottom of the checkout page and before the submit buttom. This included jQuery to calculate Donations and the Membership cost.
+
+=1.0=
+* Added the inital payment level input field
+
+* Added a check to see if the level chosen is "Donation with Free Membership" If we're on this page, let's included the anonymous donation button. If a user clicks on this button, take them to the ../donate/ page. There must be a page titled donate (or the permalink has donate) for this to work.
+
+* Changed the default membership selection out and removed the "membership level." at the end.
+
+* Commented out the following code because we want to customize the display of the membership type.
+	<?php echo wpautop(pmpro_getLevelCost($pmpro_level)); ?>
+	<?php echo wpautop(pmpro_getLevelExpiration($pmpro_level)); ?>
+
+* Changed 'Billing Address' to 'Contact Information'
+
+* Added a div class and note to use hyphens on the phone field.
+
+
